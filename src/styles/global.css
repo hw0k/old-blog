@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap');
+
+* {
+  font-family: 'Spoqa Han Sans', sans-serif;
+}
+
+pre,
+code,
+pre *,
+code * {
+  font-family: 'Fira Code', monospace !important;
+}
