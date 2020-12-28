@@ -36,6 +36,7 @@
   "devDependencies": {
     "@emotion/core": "^10.1.1",
     "@emotion/styled": "^10.0.27",
+    "@types/mdx-js__react": "^1.5.3",
     "@types/react": "^16.14.0",
     "@types/react-helmet": "^6.1.0",
     "@typescript-eslint/eslint-plugin": "^4.10.0",

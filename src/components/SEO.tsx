@@ -12,14 +12,13 @@ interface Props {
   meta?: MetaProps[];
 }
 
-function SEO({ title = '', description = '', lang = 'ko', meta = [] }: Props) {
+function SEO({ title, description, lang = 'ko', meta = [] }: Props) {
   const siteMetadata = useSiteMetadata();
 
-  const metaDescription = description || siteMetadata.description;
+  const metaDescription = description ?? siteMetadata.description;
 
   return (
     <Helmet
-      encodeSpecialCharacters={true}
       htmlAttributes={{
         lang,
       }}

@@ -8,11 +8,11 @@ function useAllMdx() {
         node: {
           frontmatter: {
             title: string;
-            description: string;
+            description: string | null;
             date: string;
             featuredImage: {
               childImageSharp: GatsbyImageFluidProps;
-            };
+            } | null;
             tags: string[];
           };
           fields: {
@@ -33,7 +33,7 @@ function useAllMdx() {
               date(formatString: "YYYY.MM.DD.")
               featuredImage {
                 childImageSharp {
-                  fluid(maxWidth: 512) {
+                  fluid(maxWidth: 640) {
                     ...GatsbyImageSharpFluid
                   }
                 }

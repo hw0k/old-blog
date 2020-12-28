@@ -1,6 +1,7 @@
 ---
 title: My Second Post!
 date: '2015-05-06T23:46:37.121Z'
+featuredImage: './logo.png'
 tags: ['Thinking', 'Writing']
 ---
 
@@ -13,6 +14,12 @@ egg yolk will be less rich."?
 
 Yeah, I didn't either.
 
-```
-hello
+```jsx
+import React from 'react';
+
+function App() {
+  return <div>Hello world!</div>;
+}
+
+export default App;
 ```

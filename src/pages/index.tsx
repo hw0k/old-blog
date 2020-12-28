@@ -18,10 +18,11 @@ function HomePage() {
       },
     }) => (
       <PostItem
+        key={slug}
         title={title}
         description={description}
         date={date}
-        thumbnailFluid={featuredImage?.childImageSharp?.fluid}
+        thumbnailFluid={featuredImage?.childImageSharp?.fluid ?? null}
         tags={tags}
         to={slug}
         excerpt={excerpt}
@@ -33,7 +34,7 @@ function HomePage() {
   return (
     <Layout>
       <div className="mx-auto px-6 container flex justify-center">
-        <div className="w-full max-w-lg flex flex-col space-y-10 md:space-y-16">{allMdx.edges.map(renderPost)}</div>
+        <div className="w-full max-w-screen-sm flex flex-col space-y-10 md:space-y-16">{allMdx.edges.map(renderPost)}</div>
       </div>
     </Layout>
   );

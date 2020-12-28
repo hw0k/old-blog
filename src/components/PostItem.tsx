@@ -7,28 +7,29 @@ import Tag from './Tag';
 
 interface Props {
   title: string;
-  description?: string;
+  description: string | null;
   date: string;
-  thumbnailFluid?: GatsbyImageFluidProps['fluid'];
+  thumbnailFluid: GatsbyImageFluidProps['fluid'] | null;
   tags: string[];
   to: string;
   excerpt: string;
 }
 
 function PostItem({ to, thumbnailFluid, title, description, tags, date, excerpt }: Props) {
-  const renderTag = useCallback((tag) => <Tag>{tag}</Tag>, []);
+  const renderTag = useCallback((tag) => <Tag key={`${to}_${tag}`}>{tag}</Tag>, [to]);
 
   return (
     <Link className="post-item" to={to ?? '/'}>
       {thumbnailFluid && (
-        <div className="mb-4 w-full relative h-40 md:h-60 rounded-lg overflow-hidden">
+        <div className="mb-4 w-full h-auto relative rounded-lg overflow-hidden">
           <div className="overlay" />
           <Image
-            fluid={thumbnailFluid}
-            className="w-full h-40 md:h-60 object-cover rounded-lg"
+            fluid={{ ...thumbnailFluid, aspectRatio: 21 / 9 }}
+            className="w-full h-auto object-cover rounded-lg"
             alt="thumbnail"
-            // MEMO(hw0k): extend base style with .transition-transform
-            imgStyle={{ transition: 'transform 150ms cubic-bezier(0.4, 0, 0.2, 1), opacity 500ms ease 0s;' }}
+            imgStyle={{
+              transition: 'transform 150ms cubic-bezier(0.4, 0, 0.2, 1), opacity 500ms ease 0s',
+            }}
           />
         </div>
       )}
