@@ -1,0 +1,26 @@
+@layer components {
+  .post-item {
+    @apply cursor-pointer;
+  }
+
+  .post-item > div > .overlay,
+  .post-item > div > img {
+    @apply transform transition-all;
+  }
+
+  .post-item > div > .overlay {
+    @apply absolute w-full h-full z-30;
+  }
+
+  .post-item:hover > div > .overlay {
+    @apply bg-gray-800 bg-opacity-20;
+  }
+
+  .post-item:hover > div > img {
+    @apply shadow-lg scale-110;
+  }
+
+  .post-item:hover > h3 {
+    @apply text-blue-500;
+  }
+}

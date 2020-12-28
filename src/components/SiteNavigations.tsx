@@ -15,8 +15,8 @@ const navigations = [
 function SiteNavigations() {
   const renderNavigation = useCallback(
     ({ path, name }: typeof navigations[number]) => (
-      <Link to={path}>
-        <li className="hover:text-white">{name}</li>
+      <Link to={path} activeClassName="text-white">
+        <li className="hover:text-green-100">{name}</li>
       </Link>
     ),
     [],
@@ -24,7 +24,7 @@ function SiteNavigations() {
 
   return (
     <nav>
-      <ul className="flex text-green-200 space-x-6">{navigations.map(renderNavigation)}</ul>
+      <ul className="flex text-base text-green-200 space-x-6">{navigations.map(renderNavigation)}</ul>
     </nav>
   );
 }
