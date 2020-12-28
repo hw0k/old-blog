@@ -16,6 +16,7 @@ function Header() {
         <p className="text-2xl md:text-3xl text-white font-bold">hw0k&apos;s Tech Blog</p>
         <div className="mb-6" />
         <p className="text-base md:text-lg text-white text-center">{description}</p>
+        <div className="mt-2.5 w-10 border-b border-blue-200" />
       </div>
     </header>
   );
