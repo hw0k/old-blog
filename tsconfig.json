@@ -15,7 +15,6 @@
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": "./"
   },
   "exclude": [
     "node_modules"

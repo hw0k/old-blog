@@ -5,7 +5,7 @@ module.exports = {
       name: `남현욱`,
       summary: `세상이 아름다워지는 것을 지향하는 프론트엔드 개발자`,
     },
-    description: `남현욱의 개발 블로그`,
+    description: `기술로 하여금 온 세상을 이롭게`,
     siteUrl: `https://hw0k.me`,
   },
   plugins: [
@@ -73,13 +73,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `hw0k.me`,
+        short_name: `hw0k.me`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#3B82F6`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/logo.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
