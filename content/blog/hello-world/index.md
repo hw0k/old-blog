@@ -2,7 +2,8 @@
 title: Hello World
 date: '2015-05-01T22:12:03.284Z'
 description: 'Hello World'
-featuredImage: '../../thumbnails/salty_egg.jpg'
+featuredImage: './salty_egg.jpg'
+tags: ['Thinking', 'React', 'World']
 ---
 
 ![Chinese Salty Egg](./salty_egg.jpg)

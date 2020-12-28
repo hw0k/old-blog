@@ -8,6 +8,11 @@ module.exports = {
       md: '768px',
       lg: '1024px',
     },
+    extend: {
+      colors: {
+        accent: '#177AB0',
+      },
+    },
   },
   variants: {
     extend: {},

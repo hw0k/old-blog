@@ -4,7 +4,7 @@
   }
 
   .post-item > div > .overlay,
-  .post-item > div > img {
+  .post-item img {
     @apply transform transition-all;
   }
 
@@ -16,11 +16,11 @@
     @apply bg-gray-800 bg-opacity-20;
   }
 
-  .post-item:hover > div > img {
+  .post-item:hover img {
     @apply shadow-lg scale-110;
   }
 
   .post-item:hover > h3 {
-    @apply text-blue-500;
+    @apply text-accent;
   }
 }

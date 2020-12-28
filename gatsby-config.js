@@ -30,13 +30,6 @@ module.exports = {
         name: `json`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/thumbnails`,
-        name: `thumbnails`,
-      },
-    },
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-mdx`,
@@ -77,7 +70,7 @@ module.exports = {
         short_name: `hw0k.me`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#3B82F6`,
+        theme_color: `#177AB0`,
         display: `minimal-ui`,
         icon: `content/assets/logo.png`,
       },
