@@ -37,6 +37,7 @@ interface Props {
 }
 
 const mdxComponents = {};
+
 function PostTemplate({ data, pageContext }: Props) {
   const {
     mdx: {
