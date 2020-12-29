@@ -12,8 +12,6 @@ import Tag from '../components/Tag';
 import useSetupUtterances from '../hooks/useSetupUtterances';
 import SEO from '../components/SEO';
 
-type MetaProps = JSX.IntrinsicElements['meta'];
-
 interface Props {
   data: {
     mdx: {
@@ -48,6 +46,16 @@ function PostTemplate({ data, pageContext }: Props) {
   } = data;
   const { slug } = pageContext;
 
+  const ogMeta = useMemo(() => {
+    const ogTags = tags ?? [];
+    return [
+      {
+        name: 'keywords',
+        content: [...ogTags, title, '남현욱', 'hw0k', '기술 블로그', 'Tech Blog'].join(','),
+      },
+    ];
+  }, [tags, title]);
+
   const renderTag = useCallback((tag) => <Tag key={`${slug}_${tag}`}>{tag}</Tag>, [slug]);
 
   const utterancesRef = useRef<HTMLDivElement | null>(null);
@@ -55,9 +63,9 @@ function PostTemplate({ data, pageContext }: Props) {
 
   return (
     <Layout>
-      <SEO title={title} description={description ?? excerpt} imageURL={featuredImage?.publicURL} />
+      <SEO title={title} description={description ?? excerpt} imageURL={featuredImage?.publicURL} meta={ogMeta} />
       {featuredImage && (
-        <div className="mx-auto mb-12 px-6 relative container flex flex-row justify-center rounded-lg md:rounded-xl">
+        <div className="mx-auto mb-8 md:mb-12 px-6 relative container flex flex-row justify-center rounded-lg md:rounded-xl">
           <GatsbyImage
             className="w-full h-auto rounded-lg md:rounded-xl"
             fluid={{ ...featuredImage.childImageSharp.fluid, aspectRatio: 21 / 9 }}
@@ -65,12 +73,12 @@ function PostTemplate({ data, pageContext }: Props) {
         </div>
       )}
       <div className="mx-auto mb-12 px-6 w-full max-w-screen-sm">
-        <p className="mb-2 text-6xl leading-normal font-extrabold">{title}</p>
-        <p className="mb-2 text-3xl leading-normal text-gray-600">{description}</p>
+        <h1 className="mb-2 md:mb-4 text-2xl md:text-4xl leading-normal font-extrabold">{title}</h1>
+        <p className="mb-2 md:mb-4 text-xl md:text-2xl leading-normal text-gray-600">{description}</p>
         {tags && <div className="mt-2 mb-2 flex flex-row space-x-2">{tags.map(renderTag)}</div>}
-        <small className="text-base">{date}</small>
+        <small className="text-sm md:text-base">{date}</small>
       </div>
-      <div className="mx-auto mb-12 px-6 prose prose-lg w-full max-w-screen-sm">
+      <div className="mx-auto mb-12 px-6 prose md:prose-lg w-full max-w-screen-sm">
         <MDXProvider components={mdxComponents}>
           <MDXRenderer>{body}</MDXRenderer>
         </MDXProvider>
