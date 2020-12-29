@@ -55,7 +55,57 @@ module.exports = {
         trackingId: `UA-186198985-1`,
       },
     },
-    `gatsby-plugin-feed-mdx`,
+    {
+      resolve: `gatsby-plugin-feed-mdx`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) =>
+              allMdx.edges.map((edge) => ({
+                ...edge.node.frontmatter,
+                description: (edge.node.frontmatter && edge.node.frontmatter.description) || edge.node.excerpt,
+                date: edge.node.frontmatter.date,
+                url: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
+                guid: `${site.siteMetadata.siteUrl}${edge.node.fields.slug}`,
+                custom_elements: [{ 'content:encoded': edge.node.html }],
+              })),
+            query: `
+              {
+                allMdx(
+                  sort: { fields: [frontmatter___date], order: DESC },
+                ) {
+                  edges {
+                    node {
+                      excerpt(pruneLength: 100, truncate: true)
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date(formatString: "YYYY.MM.DD.")
+                        description
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: 'hw0k.me RSS Feed',
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
