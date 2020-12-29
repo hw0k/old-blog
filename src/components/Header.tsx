@@ -1,10 +1,15 @@
 import React from 'react';
 
-import useSiteMetadata from '../hooks/useSiteMetadata';
+import useSiteInfo from '../hooks/useSiteInfo';
+
 import SiteNavigations from './SiteNavigations';
 
 function Header() {
-  const { description } = useSiteMetadata();
+  const {
+    site: {
+      siteMetadata: { description },
+    },
+  } = useSiteInfo();
 
   return (
     <header className="pt-4 md:pt-6 pb-12 md:pb-14 w-screen bg-gradient-to-br from-green-500 to-blue-500">

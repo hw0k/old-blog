@@ -1,14 +1,15 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-function useSiteMetadata() {
-  const {
-    site: { siteMetadata },
-  } = useStaticQuery<{
+function useSiteInfo() {
+  const site = useStaticQuery<{
     site: {
       siteMetadata: {
         title: string;
         description: string;
       };
+    };
+    file: {
+      publicURL: string;
     };
   }>(
     graphql`
@@ -19,11 +20,14 @@ function useSiteMetadata() {
             description
           }
         }
+        file(absolutePath: { regex: "/default-og-image.png/" }) {
+          publicURL
+        }
       }
     `,
   );
 
-  return siteMetadata;
+  return site;
 }
 
-export default useSiteMetadata;
+export default useSiteInfo;

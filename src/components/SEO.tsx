@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import useSiteMetadata from '../hooks/useSiteMetadata';
+import useSiteInfo from '../hooks/useSiteInfo';
 
 type MetaProps = JSX.IntrinsicElements['meta'];
 
@@ -13,7 +13,10 @@ interface Props {
 }
 
 function SEO({ title, description, lang = 'ko', meta = [] }: Props) {
-  const siteMetadata = useSiteMetadata();
+  const {
+    site: { siteMetadata },
+    file: { publicURL },
+  } = useSiteInfo();
 
   const metaDescription = description ?? siteMetadata.description;
 
@@ -41,6 +44,10 @@ function SEO({ title, description, lang = 'ko', meta = [] }: Props) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: publicURL,
         },
         ...meta,
       ]}
