@@ -23,13 +23,6 @@ module.exports = {
         name: `assets`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/json`,
-        name: `json`,
-      },
-    },
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-mdx`,
