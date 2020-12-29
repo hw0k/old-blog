@@ -10,9 +10,10 @@ interface Props {
   description?: string;
   lang?: string;
   meta?: MetaProps[];
+  imageURL?: string;
 }
 
-function SEO({ title, description, lang = 'ko', meta = [] }: Props) {
+function SEO({ title, description, lang = 'ko', imageURL, meta = [] }: Props) {
   const {
     site: { siteMetadata },
     file: { publicURL },
@@ -47,7 +48,7 @@ function SEO({ title, description, lang = 'ko', meta = [] }: Props) {
         },
         {
           property: `og:image`,
-          content: publicURL,
+          content: imageURL ?? publicURL,
         },
         ...meta,
       ]}

@@ -48,19 +48,6 @@ function PostTemplate({ data, pageContext }: Props) {
   } = data;
   const { slug } = pageContext;
 
-  const ogMeta = useMemo(() => {
-    const commonMeta: MetaProps[] = [];
-    if (featuredImage) {
-      return commonMeta.concat([
-        {
-          property: 'og:image',
-          content: featuredImage.publicURL,
-        },
-      ]);
-    }
-    return commonMeta;
-  }, [featuredImage]);
-
   const renderTag = useCallback((tag) => <Tag key={`${slug}_${tag}`}>{tag}</Tag>, [slug]);
 
   const utterancesRef = useRef<HTMLDivElement | null>(null);
@@ -68,7 +55,7 @@ function PostTemplate({ data, pageContext }: Props) {
 
   return (
     <Layout>
-      <SEO title={title} description={description ?? excerpt} meta={ogMeta} />
+      <SEO title={title} description={description ?? excerpt} imageURL={featuredImage?.publicURL} />
       {featuredImage && (
         <div className="mx-auto mb-12 px-6 relative container flex flex-row justify-center rounded-lg md:rounded-xl">
           <div className="box-border absolute left-6 right-6 h-full bg-gray-800 bg-opacity-40 z-30 rounded-lg md:rounded-xl" />
