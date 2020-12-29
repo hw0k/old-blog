@@ -58,7 +58,6 @@ function PostTemplate({ data, pageContext }: Props) {
       <SEO title={title} description={description ?? excerpt} imageURL={featuredImage?.publicURL} />
       {featuredImage && (
         <div className="mx-auto mb-12 px-6 relative container flex flex-row justify-center rounded-lg md:rounded-xl">
-          <div className="box-border absolute left-6 right-6 h-full bg-gray-800 bg-opacity-40 z-30 rounded-lg md:rounded-xl" />
           <GatsbyImage
             className="w-full h-auto rounded-lg md:rounded-xl"
             fluid={{ ...featuredImage.childImageSharp.fluid, aspectRatio: 21 / 9 }}
