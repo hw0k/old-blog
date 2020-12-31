@@ -72,19 +72,23 @@ function PostTemplate({ data, pageContext }: Props) {
           />
         </div>
       )}
-      <div className="mx-auto mb-12 px-6 w-full max-w-screen-sm">
-        <h1 className="mb-2 md:mb-4 text-2xl md:text-4xl leading-normal font-extrabold">{title}</h1>
-        <p className="mb-2 md:mb-4 text-xl md:text-2xl leading-normal text-gray-600">{description}</p>
-        {tags && <div className="mt-2 mb-2 flex flex-row space-x-2">{tags.map(renderTag)}</div>}
-        <small className="text-sm md:text-base">{date}</small>
+      <div className="mx-auto mb-12 px-6 container">
+        <div className="mx-auto w-full max-w-screen-sm">
+          <h1 className="mb-2 md:mb-4 text-2xl md:text-4xl leading-normal font-extrabold">{title}</h1>
+          <p className="mb-2 md:mb-4 text-xl md:text-2xl leading-normal text-gray-600">{description}</p>
+          {tags && <div className="mt-2 mb-2 flex flex-row space-x-2">{tags.map(renderTag)}</div>}
+          <small className="text-sm md:text-base">{date}</small>
+        </div>
       </div>
-      <div className="mx-auto mb-12 px-6 prose md:prose-lg w-full max-w-screen-sm">
-        <MDXProvider components={mdxComponents}>
-          <MDXRenderer>{body}</MDXRenderer>
-        </MDXProvider>
+      <div className="mx-auto mb-12 px-6 container">
+        <div className="mx-auto w-full max-w-screen-sm prose md:prose-lg">
+          <MDXProvider components={mdxComponents}>
+            <MDXRenderer>{body}</MDXRenderer>
+          </MDXProvider>
+        </div>
       </div>
-      <div className="mx-auto px-6 container">
-        <div ref={utterancesRef} />
+      <div className="mx-auto mb-12 px-6 container">
+        <div className="mx-auto w-full max-w-screen-sm" ref={utterancesRef} />
       </div>
     </Layout>
   );
