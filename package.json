@@ -22,7 +22,7 @@
     "gatsby-plugin-typography": "^2.7.0",
     "gatsby-remark-copy-linked-files": "^2.5.0",
     "gatsby-remark-images": "^3.6.0",
-    "gatsby-remark-prismjs": "^3.8.0",
+    "gatsby-remark-prismjs": "^3.11.0",
     "gatsby-remark-responsive-iframe": "^2.6.0",
     "gatsby-remark-smartypants": "^2.5.0",
     "gatsby-source-filesystem": "^2.6.1",
@@ -52,7 +52,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "gatsby-plugin-postcss": "^3.2.0",
-    "postcss": "^8.2.3",
+    "postcss": "^8.2.4",
     "prettier": "2.2.1",
     "tailwindcss": "^2.0.1",
     "typescript": "^4.1.3"

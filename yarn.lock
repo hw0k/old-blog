@@ -6977,10 +6977,10 @@ gatsby-remark-images@^3.6.0:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
-gatsby-remark-prismjs@^3.8.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-3.10.0.tgz#544e242c78516322466c0bfed0d0536304a59d4e"
-  integrity sha512-TKH4th2Nkb2g7KRqYWG86o7AnfA2jpwv2KE2ZrjsGxzAvKWZ/TNuJn+S9mKqtZr/pVvSlM+fS0pnckE1nNKONg==
+gatsby-remark-prismjs@^3.11.0:
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-3.11.0.tgz#68305976b2331e368f90f736e36aa9531102195f"
+  integrity sha512-aMiky/kEKfnJfByMwkPq53h9k7GUvJkPMCecu4HwCYmvM8KqCXhpqH070h7QlTuk6yAjTnxa3Ck4y3aMpkOOIw==
   dependencies:
     "@babel/runtime" "^7.12.5"
     parse-numeric-range "^0.0.2"
@@ -11718,10 +11718,10 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.26, postcss@^7.0.27, postcss@^7.0.3
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.3:
-  version "8.2.3"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.3.tgz#14ed1294850c99661761d9cb68863718eb75690d"
-  integrity sha512-tdmNCCmxJEsLZNj810qlj8QbvnUNKFL9A5doV+uHrGGK/YNKWEslrytnHDWr9M/GgGjfUFwXCRbxd/b6IoRBXQ==
+postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.4:
+  version "8.2.4"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.4.tgz#20a98a39cf303d15129c2865a9ec37eda0031d04"
+  integrity sha512-kRFftRoExRVXZlwUuay9iC824qmXPcQQVzAjbCCgjpXnkdMCJYBu2gTwAaFBzv8ewND6O8xFb3aELmEkh9zTzg==
   dependencies:
     colorette "^1.2.1"
     nanoid "^3.1.20"
