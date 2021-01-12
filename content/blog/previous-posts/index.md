@@ -44,7 +44,7 @@ tags: ['Archive']
 
 최신 글이 가장 위에 있다.
 
-- [돌아보는 2019년 한 해](https://velog.io/@hw0knam/2019-log)
+- [돌아보는 2019년 한 해](https://velog.io/@hw0knam/2019-retrospective)
 - [AirPods Pro 사용기](https://velog.io/@hw0knam/AirPods-Pro-%EC%9D%BC%EC%9D%BC-%EC%82%AC%EC%9A%A9%EA%B8%B0)
 - [멘토와 멘티의 경계](https://velog.io/@hw0knam/%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%A9%98%ED%86%A0%EC%99%80-%EB%A9%98%ED%8B%B0%EC%9D%98-%EA%B2%BD%EA%B3%84)
 - [개발자가 되기까지](https://velog.io/@hw0knam/%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EB%90%98%EA%B8%B0%EA%B9%8C%EC%A7%80-76jxvbzew4)
