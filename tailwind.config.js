@@ -25,6 +25,8 @@ module.exports = {
                 color: accentHoverColor,
               },
             },
+            'blockquote p:first-of-type::before': false,
+            'blockquote p:last-of-type::after': false,
           },
         },
       },
