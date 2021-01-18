@@ -7,7 +7,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.21",
     "@mdx-js/react": "^1.6.21",
-    "@tailwindcss/typography": "^0.3.1",
+    "@tailwindcss/typography": "^0.4.0",
     "gatsby": "^2.27.4",
     "gatsby-image": "^2.6.0",
     "gatsby-plugin-feed": "^2.8.0",
