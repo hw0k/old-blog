@@ -6813,13 +6813,13 @@ gatsby-plugin-page-creator@^2.7.1:
     globby "^11.0.1"
     lodash "^4.17.20"
 
-gatsby-plugin-postcss@^3.2.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-postcss/-/gatsby-plugin-postcss-3.4.0.tgz#ad3607da60421c7593b6db509398a3dccb477678"
-  integrity sha512-91iSfMNczGExULcP1xdyYctf9EmRfTYLzhWUOmOnsGD1R3jPrEmSt4LGIBh4LtpLPuVuJZNZGYVfXhKuQCYS2A==
+gatsby-plugin-postcss@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-postcss/-/gatsby-plugin-postcss-3.6.0.tgz#f6ae9a9f9a09ff2e67b53f954a44719eeeeca5b1"
+  integrity sha512-wcC2u70Q4MYAeXwwPCknQGJoLKwI9vNsDMKrtSjxGsvpedkEacRwk3xsomCS4idZKDOb/f9fxc2jwfWgiaDxQw==
   dependencies:
     "@babel/runtime" "^7.12.5"
-    postcss-loader "^4.0.4"
+    postcss-loader "^4.1.0"
 
 gatsby-plugin-react-helmet@^3.5.0:
   version "3.7.0"
@@ -11452,7 +11452,7 @@ postcss-loader@^3.0.0:
     postcss-load-config "^2.0.0"
     schema-utils "^1.0.0"
 
-postcss-loader@^4.0.4:
+postcss-loader@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-4.1.0.tgz#4647a6c8dad3cb6b253fbfaa21d62201086f6e39"
   integrity sha512-vbCkP70F3Q9PIk6d47aBwjqAMI4LfkXCoyxj+7NPNuVIwfTGdzv2KVQes59/RuxMniIgsYQCFSY42P3+ykJfaw==
