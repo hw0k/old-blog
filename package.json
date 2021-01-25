@@ -5,6 +5,7 @@
   "version": "0.0.0",
   "author": "hw0k <hw0knam@gmail.com>",
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^2.3.1",
     "@mdx-js/mdx": "^1.6.21",
     "@mdx-js/react": "^1.6.21",
     "@tailwindcss/typography": "^0.3.1",
@@ -21,8 +22,8 @@
     "gatsby-plugin-sitemap": "^2.9.0",
     "gatsby-plugin-typography": "^2.7.0",
     "gatsby-remark-copy-linked-files": "^2.5.0",
+    "gatsby-remark-highlight-code": "^2.1.1",
     "gatsby-remark-images": "^3.6.0",
-    "gatsby-remark-prismjs": "^3.8.0",
     "gatsby-remark-responsive-iframe": "^2.6.0",
     "gatsby-remark-smartypants": "^2.5.0",
     "gatsby-source-filesystem": "^2.6.1",
