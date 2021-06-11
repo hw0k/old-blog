@@ -6788,13 +6788,13 @@ gatsby-plugin-page-creator@^2.9.0:
     globby "^11.0.1"
     lodash "^4.17.20"
 
-gatsby-plugin-postcss@^3.2.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-postcss/-/gatsby-plugin-postcss-3.4.0.tgz#ad3607da60421c7593b6db509398a3dccb477678"
-  integrity sha512-91iSfMNczGExULcP1xdyYctf9EmRfTYLzhWUOmOnsGD1R3jPrEmSt4LGIBh4LtpLPuVuJZNZGYVfXhKuQCYS2A==
+gatsby-plugin-postcss@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-postcss/-/gatsby-plugin-postcss-3.7.0.tgz#6f17b0e8c44aed51b360742d2c60d6956d2abed5"
+  integrity sha512-LMIzWuXfpn8q5EZoPbdEfvhMZlpbLN8uGwW8xTV4R4eP1NVyw+Bp/JxbWsujglNu9ezVwxxv5TsCjcdsKBHMyw==
   dependencies:
     "@babel/runtime" "^7.12.5"
-    postcss-loader "^4.0.4"
+    postcss-loader "^4.1.0"
 
 gatsby-plugin-react-helmet@^3.5.0:
   version "3.7.0"
@@ -11410,16 +11410,16 @@ postcss-loader@^3.0.0:
     postcss-load-config "^2.0.0"
     schema-utils "^1.0.0"
 
-postcss-loader@^4.0.4:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-4.1.0.tgz#4647a6c8dad3cb6b253fbfaa21d62201086f6e39"
-  integrity sha512-vbCkP70F3Q9PIk6d47aBwjqAMI4LfkXCoyxj+7NPNuVIwfTGdzv2KVQes59/RuxMniIgsYQCFSY42P3+ykJfaw==
+postcss-loader@^4.1.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/postcss-loader/-/postcss-loader-4.3.0.tgz#2c4de9657cd4f07af5ab42bd60a673004da1b8cc"
+  integrity sha512-M/dSoIiNDOo8Rk0mUqoj4kpGq91gcxCfb9PoyZVdZ76/AuhxylHDYZblNE8o+EQ9AMSASeMFEKxZf5aU6wlx1Q==
   dependencies:
     cosmiconfig "^7.0.0"
     klona "^2.0.4"
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
-    semver "^7.3.2"
+    semver "^7.3.4"
 
 postcss-merge-longhand@^4.0.11:
   version "4.0.11"
@@ -13010,6 +13010,13 @@ semver@^7.2.1, semver@^7.3.2:
   version "7.3.4"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.4.tgz#27aaa7d2e4ca76452f98d3add093a72c943edc97"
   integrity sha512-tCfb2WLjqFAtXn4KEdxIhalnRtoKFN7nAwj0B3ZXCbQloV2tq5eDbcTmT68JJD3nRJq24/XgxtQKFIpQdtvmVw==
+  dependencies:
+    lru-cache "^6.0.0"
+
+semver@^7.3.4:
+  version "7.3.5"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.5.tgz#0b621c879348d8998e4b0e4be94b3f12e6018ef7"
+  integrity sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==
   dependencies:
     lru-cache "^6.0.0"
 
